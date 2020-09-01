@@ -81,9 +81,9 @@ function set(event) {
 
   if (winCondition()) {
     if (turn === 0) {
-      alert("Player 1 won!");
-    } else {
       alert("Player 2 won!");
+    } else {
+      alert("Player 1 won!");
     }
   } else if (moves === 25) {
     alert("Draw");

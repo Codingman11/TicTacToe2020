@@ -1,13 +1,6 @@
-#app {
-  max-width: 500px;
-  margin: auto;
-}
-
-h1 {
-  margin-block-start: 40px;
-  margin-block-end: 100px;
-  margin-left: 250px;
-  font-weight: bold;
+body {
+  margin-block-start: 200px;
+  margin-inline-start: 300px;
 }
 #table {
   height: 400px;
