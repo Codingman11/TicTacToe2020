@@ -80,8 +80,11 @@ function set(event) {
   }
 
   if (winCondition()) {
-    alert("Winner!");
-    reset();
+    if (turn === 0) {
+      alert("Player 1 won!");
+    } else {
+      alert("Player 2 won!");
+    }
   } else if (moves === 25) {
     alert("Draw");
     reset();
