@@ -60,6 +60,7 @@ function move() {
 
 function set(event) {
   move();
+
   if (this.innerHTML === EMPTY && turn === 0) {
     this.innerHTML = player;
     turn = 1;
@@ -80,12 +81,8 @@ function set(event) {
   }
 
   if (winCondition()) {
-    if (turn === 0) {
-      alert("Player 2 won!");
-    } else if (turn === 1) {
-      turn = 0;
-      alert("Player 1 won!");
-    }
+    alert("Winner!");
+    reset();
   } else if (moves === 25) {
     alert("Draw");
     reset();
