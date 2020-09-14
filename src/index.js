@@ -14,16 +14,19 @@ function makeArray(board) {
   }
 }
 function createTable() {
-  let table = document.createElement("table");
+  let table = document.createElement("div");
   table.setAttribute("id", "table");
+  table.setAttribute("class", "container");
   var a = 0;
   for (let i = 0; i < MAX; i++) {
-    let tabRow = document.createElement("tr");
-    tabRow.setAttribute("id", "row");
+    let tabRow = document.createElement("div");
+    tabRow.setAttribute("id", "tabRow");
+    tabRow.setAttribute("class", "row");
 
     for (let j = 0; j < MAX; j++) {
-      let tabCell = document.createElement("td");
+      let tabCell = document.createElement("div");
       tabCell.setAttribute("id", a);
+      tabCell.setAttribute("class", "col l1");
 
       tabCell.addEventListener("click", set, false);
       let node = document.createTextNode("");
@@ -60,14 +63,12 @@ function move() {
 
 function set(event) {
   move();
-
   if (this.innerHTML === EMPTY && turn === 0) {
     this.innerHTML = player;
     turn = 1;
     player = "O";
     moves++;
 
-    ticArray[event.target.parentNode.rowIndex][event.target.cellIndex] = "X";
     this.classList.add("x");
   } else if (this.innerHTML === EMPTY && turn === 1) {
     this.innerHTML = player;

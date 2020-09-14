@@ -1,20 +1,32 @@
-body {
-  margin-block-start: 200px;
-  margin-inline-start: 300px;
+#app {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  margin-block-start: 40px;
+  margin-block-end: 100px;
+  margin-left: 250px;
+  font-weight: bold;
 }
 #table {
+  height: 400px;
+  width: 400px;
   border-collapse: collapse;
 }
-td {
+.l1 {
   font-size: 30px;
   font-family: Helvetica;
   border: 1px solid black;
   vertical-align: middle;
   text-align: center;
-  height: 59px;
-  width: 59px;
+  height: 60px;
+  width: 60px;
 }
 
+.row {
+  margin-bottom: 0px;
+}
 .x {
   background-color: rgb(124, 252, 0);
 }
