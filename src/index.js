@@ -41,7 +41,9 @@ function createTable() {
 
   var board = document.getElementById("board");
   board.appendChild(table);
-
+}
+//Making the progress bar functional
+function move() {
   var myBar = document.getElementById("myBar");
   var progress = document.createElement("div");
   progress.setAttribute("class", "progress");
@@ -49,11 +51,6 @@ function createTable() {
   inter.setAttribute("class", "intermediate");
   progress.appendChild(inter);
   myBar.appendChild(progress);
-}
-
-//Making the progress bar functional
-function move() {
-  var myBar = document.getElementById("myBar");
   let time = 0;
   var width = 0;
   var id = setInterval(frame, 1000);
