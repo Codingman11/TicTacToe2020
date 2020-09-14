@@ -41,6 +41,14 @@ function createTable() {
 
   var board = document.getElementById("board");
   board.appendChild(table);
+
+  var myBar = document.getElementById("myBar");
+  var progress = document.createElement("div");
+  progress.setAttribute("class", "progress");
+  var inter = document.createElement("div");
+  inter.setAttribute("class", "intermediate");
+  progress.appendChild(inter);
+  myBar.appendChild(progress);
 }
 
 //Making the progress bar functional
@@ -69,12 +77,13 @@ function set(event) {
     player = "O";
     moves++;
 
+    //ticArray[event.target.parentNode.rowIndex][event.target.cellIndex] = "X";
     this.classList.add("x");
   } else if (this.innerHTML === EMPTY && turn === 1) {
     this.innerHTML = player;
     turn = 0;
     player = "X";
-    ticArray[event.target.parentNode.rowIndex][event.target.cellIndex] = "O";
+    //ticArray[event.target.parentNode.rowIndex][event.target.cellIndex] = "O";
     moves++;
     this.classList.add("o");
   } else {
